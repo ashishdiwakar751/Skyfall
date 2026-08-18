@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #080807;
+  --bg-secondary: #11100E;
+  --bg-charcoal: #181613;
+  --gold-champagne: #D6B15A;
+  --gold-bronze: #A8792F;
+  --text-primary: #F5F1E8;
+  --text-muted: #AAA49A;
+  --border-subtle: #2A2823;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #080807;
+    color: #F5F1E8;
+  }
+
+  #root {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Accessibility focus indicator */
+  :focus-visible {
+    outline: 2px solid var(--gold-champagne);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom Utilities for Luxury Aesthetic */
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #F5F1E8 0%, #D6B15A 50%, #A8792F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .border-gold-glow {
+    border-color: rgba(214, 177, 90, 0.3);
+    box-shadow: 0 0 15px rgba(214, 177, 90, 0.08);
+  }
+}
